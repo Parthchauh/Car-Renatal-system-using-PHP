@@ -3,6 +3,8 @@
  * Update existing car images with high-quality URLs
  */
 require_once __DIR__ . '/includes/db_connect.php';
+$pdo = getDBConnection();
+
 
 $images = [
     'Camry' => 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg',
