@@ -34,7 +34,8 @@ try {
     foreach ($images as $model => $url) {
         $stmt = $pdo->prepare("UPDATE cars SET image = ? WHERE model = ?");
         $stmt->execute([$url, $model]);
-        echo "Updated $model with $url\n";
+        $rows = $stmt->rowCount();
+        echo "Updated $model: " . ($rows > 0 ? "✅ Success ($rows rows)" : "⚠️ No match found") . "<br>";
     }
     $pdo->commit();
     echo "\nAll images updated successfully!";
