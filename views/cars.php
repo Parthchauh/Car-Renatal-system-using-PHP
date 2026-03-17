@@ -177,7 +177,7 @@ async function loadCars() {
                 <div class="col-lg-4 col-md-6 fade-in-up">
                     <div class="car-card">
                         <div class="car-image-wrapper">
-                            <img src="${car.image && !car.image.includes('default') ? APP.baseUrl + '/' + car.image : 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=250&fit=crop'}" alt="${car.model}" loading="lazy">
+                            <img src="${getCarImage(car.image)}" alt="${car.model}" loading="lazy">
                             <span class="car-badge ${car.status}">${car.status}</span>
                         </div>
                         <div class="car-body">

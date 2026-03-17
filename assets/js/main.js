@@ -168,6 +168,20 @@ function statusBadge(status) {
     return `<span class="badge-status badge-${status}">${status}</span>`;
 }
 
+/**
+ * Handles car image paths (local vs external)
+ */
+function getCarImage(path) {
+    if (!path || path.includes('default')) {
+        return 'https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400&h=250&fit=crop';
+    }
+    if (path.startsWith('http')) {
+        return path;
+    }
+    return `${APP.baseUrl}/${path}`;
+}
+
+
 // ============ Star Rating Display ============
 function starRating(rating) {
     let stars = '';

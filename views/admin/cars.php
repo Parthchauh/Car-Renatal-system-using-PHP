@@ -8,8 +8,8 @@
 <div class="glass-card">
     <div class="table-responsive">
         <table class="table table-custom mb-0">
-            <thead><tr><th>Vehicle</th><th>Brand</th><th>Category</th><th>Price/Day</th><th>Status</th><th>Actions</th></tr></thead>
-            <tbody id="carsTable"><tr><td colspan="6" class="text-center py-4"><div class="spinner-custom mx-auto"></div></td></tr></tbody>
+            <thead><tr><th>Img</th><th>Vehicle</th><th>Brand</th><th>Category</th><th>Price/Day</th><th>Status</th><th>Actions</th></tr></thead>
+            <tbody id="carsTable"><tr><td colspan="7" class="text-center py-4"><div class="spinner-custom mx-auto"></div></td></tr></tbody>
         </table>
     </div>
     <div id="carsPag" class="mt-3"></div>
@@ -59,6 +59,7 @@ async function loadCars() {
         const data = await apiRequest(`cars/index.php?status=all&page=${cPage}`);
         document.getElementById('carsTable').innerHTML = data.cars.map(c => `
             <tr>
+                <td><img src="${getCarImage(c.image)}" class="rounded" style="width:50px;height:35px;object-fit:cover;border:1px solid var(--border-color);"></td>
                 <td><strong>${c.model}</strong> <small class="text-secondary">(${c.year})</small></td>
                 <td>${c.brand_name}</td>
                 <td><span class="badge-status badge-${c.category === 'luxury' ? 'confirmed' : 'active'}">${c.category}</span></td>
