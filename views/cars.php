@@ -224,7 +224,11 @@ async function loadCars() {
             });
         });
     } catch (e) {
-        document.getElementById('carsGrid').innerHTML = '<div class="col-12 text-center"><p class="text-danger">Failed to load cars.</p></div>';
+        console.error('loadCars error:', e);
+        document.getElementById('carsGrid').innerHTML = `<div class="col-12 text-center text-danger py-5">
+            <i class="fas fa-exclamation-triangle mb-2" style="font-size:2rem;"></i>
+            <p>Failed to load cars: ${e.message}</p>
+        </div>`;
     }
 }
 

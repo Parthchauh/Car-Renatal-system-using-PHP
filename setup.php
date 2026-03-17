@@ -227,7 +227,7 @@ if ($userCount > 0) {
             ('John Doe', 'john@example.com', '+1987654321', '\$2y\$10\$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user', 'active'),
             ('Jane Smith', 'jane@example.com', '+1122334455', '\$2y\$10\$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'user', 'active')",
 
-        'Brands (8 brands)' => "INSERT INTO `brands` (`name`, `description`, `status`) VALUES
+        'Brands (12 brands)' => "INSERT INTO `brands` (`name`, `description`, `status`) VALUES
             ('Toyota', 'Reliable Japanese automaker known for quality and durability', 'active'),
             ('BMW', 'German luxury vehicle manufacturer', 'active'),
             ('Mercedes-Benz', 'Premium German automotive brand', 'active'),
@@ -235,21 +235,31 @@ if ($userCount > 0) {
             ('Tesla', 'Leading electric vehicle manufacturer', 'active'),
             ('Audi', 'German luxury automobile manufacturer', 'active'),
             ('Ford', 'American multinational automobile manufacturer', 'active'),
-            ('Hyundai', 'South Korean multinational automotive manufacturer', 'active')",
+            ('Hyundai', 'South Korean multinational automotive manufacturer', 'active'),
+            ('Lamborghini', 'Italian luxury sports car manufacturer', 'active'),
+            ('Porsche', 'German high-performance sports car manufacturer', 'active'),
+            ('Ferrari', 'World famous Italian luxury sports car manufacturer', 'active'),
+            ('Land Rover', 'British four-wheel drive specialist manufacturer', 'active')",
 
-        'Cars (12 vehicles)' => "INSERT INTO `cars` (`brand_id`, `model`, `year`, `color`, `price_per_day`, `fuel_type`, `transmission`, `seats`, `category`, `description`, `features`, `mileage`, `image`, `status`) VALUES
+        'Cars (18 vehicles)' => "INSERT INTO `cars` (`brand_id`, `model`, `year`, `color`, `price_per_day`, `fuel_type`, `transmission`, `seats`, `category`, `description`, `features`, `mileage`, `image`, `status`) VALUES
             (1, 'Camry', 2024, 'Pearl White', 65.00, 'petrol', 'automatic', 5, 'midsize', 'The Toyota Camry offers exceptional comfort and reliability.', 'Bluetooth, Backup Camera, Lane Assist, Apple CarPlay', '32 MPG', 'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg', 'available'),
-            (1, 'RAV4', 2024, 'Midnight Black', 80.00, 'hybrid', 'automatic', 5, 'suv', 'Adventure-ready SUV with hybrid efficiency.', 'AWD, Sunroof, Heated Seats, Adaptive Cruise Control', '38 MPG', 'https://images.unsplash.com/photo-1459356979461-dae1b8dcb07b', 'available'),
-            (2, '3 Series', 2024, 'Alpine White', 120.00, 'petrol', 'automatic', 5, 'luxury', 'The BMW 3 Series delivers the ultimate driving experience.', 'Sport Package, Navigation, Leather Seats, Harman Kardon Sound', '30 MPG', 'https://images.unsplash.com/photo-1461632830798-3adb3034e4c8', 'available'),
-            (2, 'X5', 2024, 'Space Gray', 180.00, 'diesel', 'automatic', 7, 'suv', 'Luxury SUV perfect for family trips.', 'Panoramic Roof, Third Row, Ambient Lighting, Gesture Control', '25 MPG', 'https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg', 'available'),
+            (12, 'Range Rover SUV', 2024, 'White', 250.00, 'diesel', 'automatic', 5, 'suv', 'Adventure-ready luxury SUV with commanding presence.', 'AWD, Sunroof, Heated Seats, Adaptive Cruise Control', '22 MPG', 'https://images.unsplash.com/photo-1459356979461-dae1b8dcb07b', 'available'),
+            (2, 'M3', 2024, 'Blue', 140.00, 'petrol', 'automatic', 5, 'luxury', 'High-performance sedan with racing DNA.', 'Sport Package, Navigation, Leather Seats, Harman Kardon Sound', '24 MPG', 'https://images.unsplash.com/photo-1461632830798-3adb3034e4c8', 'available'),
+            (2, 'X5', 2024, 'Midnight Black', 180.00, 'diesel', 'automatic', 7, 'suv', 'Luxury SUV perfect for family trips.', 'Panoramic Roof, Third Row, Ambient Lighting, Gesture Control', '25 MPG', 'https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg', 'available'),
             (3, 'C-Class', 2024, 'Obsidian Black', 130.00, 'petrol', 'automatic', 5, 'luxury', 'Elegant and powerful Mercedes-Benz sedan.', 'MBUX System, Burmester Sound, Digital Cockpit, Wireless Charging', '29 MPG', 'https://images.unsplash.com/photo-1517841905240-472988babdf9', 'available'),
             (3, 'GLE', 2024, 'Selenite Gray', 200.00, 'diesel', 'automatic', 7, 'suv', 'Premium SUV with commanding presence.', 'Air Suspension, 360 Camera, MBUX, Massage Seats', '24 MPG', 'https://images.pexels.com/photos/358489/pexels-photo-358489.jpeg', 'available'),
-            (4, 'Civic', 2024, 'Rallye Red', 55.00, 'petrol', 'manual', 5, 'compact', 'Sporty and efficient compact sedan.', 'Honda Sensing, Bose Audio, Wireless CarPlay, LED Headlights', '36 MPG', 'https://images.unsplash.com/photo-1502877338535-766e1452684a', 'available'),
-            (5, 'Model 3', 2024, 'Deep Blue', 150.00, 'electric', 'automatic', 5, 'luxury', 'All-electric performance sedan with autopilot.', 'Autopilot, Glass Roof, 15-inch Touchscreen, OTA Updates', '358 mi Range', 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d', 'available'),
-            (5, 'Model S', 2024, 'Red Multi-Coat', 170.00, 'electric', 'automatic', 7, 'suv', 'Electric SUV with impressive range and space.', 'Full Self-Driving Capable, Camp Mode, Premium Audio', '330 mi Range', 'https://images.unsplash.com/photo-1503376780353-7e6692767b70', 'available'),
+            (4, 'Civic', 2024, 'Sonic Blue', 55.00, 'petrol', 'manual', 5, 'compact', 'Sporty and efficient compact sedan.', 'Honda Sensing, Bose Audio, Wireless CarPlay, LED Headlights', '36 MPG', 'https://images.unsplash.com/photo-1502877338535-766e1452684a', 'available'),
+            (5, 'Model S', 2024, 'Pearl White', 170.00, 'electric', 'automatic', 5, 'luxury', 'All-electric luxury sedan with autopilot.', 'Autopilot, Glass Roof, 15-inch Touchscreen, OTA Updates', '405 mi Range', 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d', 'available'),
+            (11, 'Enzo', 2024, 'Red Ferrari', 1200.00, 'petrol', 'automatic', 2, 'luxury', 'The ultimate Ferrari performance machine.', 'V12 Engine, Carbon Fiber Body, Track Mode', '12 MPG', 'https://images.unsplash.com/photo-1503376780353-7e6692767b70', 'available'),
             (6, 'A4', 2024, 'Navarra Blue', 110.00, 'petrol', 'automatic', 5, 'luxury', 'Refined luxury sedan with quattro AWD.', 'Virtual Cockpit, B&O Sound, Matrix LED, quattro AWD', '28 MPG', 'https://images.unsplash.com/photo-1511390835673-02e273e6b0e7', 'available'),
-            (7, 'Mustang', 2024, 'Race Red', 140.00, 'petrol', 'manual', 4, 'sports', 'Iconic American muscle car experience.', 'V8 Engine, Track Mode, Recaro Seats, MagneRide Suspension', '22 MPG', 'https://images.unsplash.com/photo-1549921296-a0108b3a0664', 'available'),
-            (8, 'Tucson', 2024, 'Amazon Gray', 60.00, 'hybrid', 'automatic', 5, 'compact', 'Modern compact SUV with hybrid efficiency.', 'BlueLink, Wireless Charging, Bose Audio, Smart Liftgate', '38 MPG', 'https://images.pexels.com/photos/1707826/pexels-photo-1707826.jpeg', 'available')",
+            (7, 'Mustang', 2024, 'Muscle Orange', 140.00, 'petrol', 'manual', 4, 'sports', 'Iconic American muscle car experience.', 'V8 Engine, Track Mode, Recaro Seats, MagneRide Suspension', '22 MPG', 'https://images.unsplash.com/photo-1549921296-a0108b3a0664', 'available'),
+            (8, 'Tucson', 2024, 'Deep Blue', 60.00, 'hybrid', 'automatic', 5, 'compact', 'Modern compact SUV with hybrid efficiency.', 'BlueLink, Wireless Charging, Bose Audio, Smart Liftgate', '38 MPG', 'https://images.pexels.com/photos/1707826/pexels-photo-1707826.jpeg', 'available'),
+            (9, 'Huracan', 2024, 'Vibrant Red', 950.00, 'petrol', 'automatic', 2, 'luxury', 'Italian masterpiece of speed and design.', 'V10 Engine, AWD, Carbon-Ceramic Brakes', '15 MPG', 'https://images.unsplash.com/photo-1511918984145-48de785d4c4e', 'available'),
+            (10, '911 Carrera', 2024, 'Pure White', 450.00, 'petrol', 'automatic', 4, 'sports', 'The benchmark for high-performance sports cars.', 'Sport Chrono Package, PASM, LED Matrix Headlights', '21 MPG', 'https://images.unsplash.com/photo-1471478331149-c72a5ac19173', 'available'),
+            (6, 'R8 Spyder', 2024, 'Silver Metallic', 600.00, 'petrol', 'automatic', 2, 'sports', 'V10 power with an open-top experience.', 'Audi Virtual Cockpit, Carbon Inlays, Performance Exhaust', '18 MPG', 'https://images.unsplash.com/photo-1511390835673-02e273e6b0e7', 'available'),
+            (2, '5 Series', 2024, 'Glacier Silver', 150.00, 'petrol', 'automatic', 5, 'luxury', 'The perfect balance of luxury and performance.', 'Heated Seats, Parking Assistant Plus, Driving Assistant', '28 MPG', 'https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg', 'available'),
+            (3, 'E-Class Coupe', 2024, 'Mars Red', 160.00, 'petrol', 'automatic', 4, 'luxury', 'Sporty elegance in a pillarless coupe design.', 'Night Package, Panoramic Roof, AMG Line', '26 MPG', 'https://images.pexels.com/photos/384914/pexels-photo-384914.jpeg', 'available'),
+            (2, 'X7 Luxury', 2024, 'Black Sapphire', 220.00, 'diesel', 'automatic', 7, 'luxury', 'Largest BMW SUV with maximum comfort for seven.', 'Sky Lounge, Captain Seats, Soft Close Doors', '21 MPG', 'https://images.pexels.com/photos/358489/pexels-photo-358489.jpeg', 'available')",
 
         'Bookings (4 samples)' => "INSERT INTO `bookings` (`user_id`, `car_id`, `pickup_date`, `return_date`, `total_days`, `daily_rate`, `total_amount`, `status`) VALUES
             (2, 1, '2026-03-20', '2026-03-25', 5, 65.00, 325.00, 'confirmed'),

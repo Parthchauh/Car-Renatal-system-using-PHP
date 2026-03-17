@@ -76,7 +76,10 @@ async function loadCars() {
         document.querySelectorAll('#carsPag .page-link').forEach(l => l.addEventListener('click', e => {
             e.preventDefault(); cPage = parseInt(e.target.closest('.page-link').dataset.page); loadCars();
         }));
-    } catch(e) { Toast.error('Failed to load cars.'); }
+    } catch(e) { 
+        console.error('Admin loadCars error:', e);
+        Toast.error('Failed to load cars: ' + e.message); 
+    }
 }
 
 function resetCarForm() {
